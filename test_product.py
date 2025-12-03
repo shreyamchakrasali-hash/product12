@@ -1,17 +1,11 @@
-from product import format_product_info
+from product import product_details
 
-def test_format_product_info():
-    product_id = 101
-    name = "Laptop"
-    quantity = 5
-    price = 799.99
-
-    expected_output = (
-        "Product Information:\n"
-        "ID: 101\n"
-        "Name: Laptop\n"
-        "Quantity: 5\n"
-        "Price: $799.99"
+def test_product_details_output():
+    result = product_details("P101", "Laptop", 5, 55000)
+    expected = (
+        "Product ID   : P101\n"
+        "Product Name : Laptop\n"
+        "Quantity     : 5\n"
+        "Price        : 55000"
     )
-
-    assert format_product_info(product_id, name, quantity, price) == expected_output
+    assert result == expected
