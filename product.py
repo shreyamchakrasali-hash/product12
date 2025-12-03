@@ -1,27 +1,16 @@
-def format_product_info(product_id, name, quantity, price):
-
-
-
-   
-
+def product_details(product_id, name, quantity, price):
     return (
-
-        f"Product Information:\n"
-
-        f"ID: {product_id}\n"
-
-        f"Name: {name}\n"
-
-        f"Quantity: {quantity}\n"
-
-        f"Price: ${price:.2f}"
-
+        f"Product ID   : {product_id}\n"
+        f"Product Name : {name}\n"
+        f"Quantity     : {quantity}\n"
+        f"Price        : {price}"
     )
 
 
+if _name_ == "_main_":
+    pid = "P101"
+    pname = "Laptop"
+    qty = 5
+    pr = 55000
 
-
-
-if __name__ == "__main__":
-
-    print(format_product_info(101, "Laptop", 5, 799.99))
+    print(product_details(pid, pname, qty, pr))
